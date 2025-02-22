@@ -6,7 +6,7 @@
 /*   By: ltheveni <ltheveni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 09:51:08 by ltheveni          #+#    #+#             */
-/*   Updated: 2025/02/22 11:04:40 by ltheveni         ###   ########.fr       */
+/*   Updated: 2025/02/22 11:11:39 by ltheveni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,11 @@ public:
   public:
     const char *what() const throw();
   };
+  Bureaucrat();
   Bureaucrat(const std::string &name, int grade);
+  Bureaucrat(const Bureaucrat &other);
+  Bureaucrat &operator=(const Bureaucrat &other);
+  ~Bureaucrat();
 
   std::string const &getName() const;
   int getGrade() const;
